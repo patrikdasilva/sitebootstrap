@@ -71,6 +71,7 @@ div > h3{
     right: 20px;
     
 }
+
 table{
     cursor: pointer;
     width: 90%;
@@ -78,7 +79,11 @@ table{
     margin-right: 5px;
 }
 footer{
+    width: 100%;
     color: black;
     background-color: #999999;
     text-align: center;
+}
+.card-deck{
+    margin: 10px;
 }
