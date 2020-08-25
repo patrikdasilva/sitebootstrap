@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #053150">
         <a class="navbar-brand" href="Index.html">Type Four</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,11 +29,12 @@
                     <a class="nav-link" href="Produtos.html">Produtos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Contato.html">Contato</a>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="@mdo">Contato</button>
                 </li>
             </ul>
         </div>
-      
+
     </nav>
     <h1 id="empresa">Empresa</h1>
 
@@ -63,6 +64,53 @@
             </p>
         </div>
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Envie sua Mensagem</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="msg-erro" class="alert alert-danger msg">
+                        <label>Preencha os campos corretamente!</label>
+                    </div>
+                    <div id="msg-sucesso" class="alert alert-success msg">
+                        <label>Enviado!</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Ex: João da Silva">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Data</label>
+                        <input type="date" class="form-control" id="data">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput3">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ex: joaodasilva@exemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput4">Telefone</label>
+                        <input type="tel" class="form-control" id="numero" placeholder="(00)9999999">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput5">Mensagem</label>
+                        <textarea class="form-control " placeholder="Insira sua mensagem" required id="area"></textarea>
+                    </div>
+                    <div class="modal-footer form-group">
+                        <button type="button" class="btn btn-success" 
+                            onclick="validardados()">Enviar</button>
+                        <button type="reset" class="btn btn-danger">Limpar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/Contato.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap-4.0.0/js/bootstrap.min.js"></script>
 </body>
